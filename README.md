@@ -1,0 +1,1 @@
+# credit-money-type-diagnosis
