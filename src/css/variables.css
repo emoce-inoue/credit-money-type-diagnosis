@@ -23,21 +23,30 @@
   --fluid-ratio-max: calc(1 / var(--layout-width-max) * 100dvi);
   --aspect-video: 16 / 9;
   --aspect-thumbnail: 4 / 3;
-  --rounded-l: 30px;
+  --rounded-xs: 5px;
+  --rounded-s: 15px;
+  --rounded-m: 30px;
+  --rounded-l: 45px;
 
   /* color */
   --color-grayscale-0: #fff;
+  --color-grayscale-100: #D1D1D1;
+  --color-grayscale-200: #ABABAB;
   --color-grayscale-900: #065075;
   --color-grayscale-1000: #000;
   --color-bluescale-100: #C6ECF8;
   --color-bluescale-200: #40A9DE;
   --color-bluescale-300: #14689C;
+  --color-bluescale-400: #004D96;
+  --color-yellowscale-50: #FFF5C8;
   --color-yellowscale-100: #FFE056;
   --color-yellowscale-200: #F0C50A;
   --color-orangescale-100: #FC8B01;
+  --color-orangescale-200: #D57500;
   --background-base: var(--color-bluescale-200);
   --font-base: var(--color-grayscale-900);
   --underline-base: color-mix(in srgb, currentcolor, transparent 40%);
+  --panel-box-shadow: rgb(29 131 195 / 0.2);;
 
   /* z-index */
   --back-z-index: -1;

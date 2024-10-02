@@ -1,0 +1,90 @@
+.c-button {
+  inline-size: min(100%, 315px);
+  padding-block: 10px;
+  background-color: var(--color-grayscale-0);
+  border: 1.5px solid var(--color-bluescale-300);
+  border-radius: calc(infinity * 1px);
+  box-shadow: 0 2px 0 var(--color-bluescale-300);
+  font-size: calc(12* var(--rem-ratio));
+  text-align: center;
+}
+
+.c-button--selected {
+  background-color: var(--color-yellowscale-100);
+  box-shadow: revert;
+}
+
+.c-full-button {
+  display: inline grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 10px;
+  align-items: center;
+  inline-size: min(100%, 538px);
+  padding: 12px 15px;
+  background-color: var(--color-yellowscale-100);
+  border-radius: calc(infinity * 1px);
+  box-shadow: 0 5px 0 var(--color-yellowscale-200);
+}
+
+.c-full-button::before {
+  content: '';
+}
+
+.c-full-button::after {
+  content: '';
+  justify-self: end;
+  inline-size: 17px;
+  aspect-ratio: 1;
+  background: var(--arrow-bottom) no-repeat center / contain;
+}
+
+.c-full-button__text {
+  inline-size: min(100%, 277px);
+  margin-inline: auto;
+}
+
+.c-full-button--result {
+  padding: 15px;
+}
+
+.c-full-button--result-disabled {
+  background-color: var(--color-grayscale-100);
+  box-shadow: 0 4px 0 var(--color-grayscale-200);
+}
+
+.c-full-button--result-on {
+  background-color: var(--color-yellowscale-100);
+  box-shadow: 0 5px 0 var(--color-yellowscale-200);
+}
+
+.c-full-button--hidden {
+  display: none;
+}
+
+.c-full-button--result::after {
+  inline-size: revert;
+  background: revert;
+}
+
+.c-full-button--consult {
+  inline-size: min(100%, 190px);
+  margin-inline: auto;
+  background-color: var(--color-orangescale-100);
+  box-shadow: 0 5px 0 var(--color-orangescale-200);
+}
+
+.c-full-button--consult::after {
+  content: '';
+  justify-self: end;
+  inline-size: 10px;
+  aspect-ratio: 1;
+  background: var(--white-arrow-right) no-repeat center / contain;
+}
+
+.c-full-button__text--consult {
+  inline-size: min(100%, 157px);
+}
+
+.c-full-button__text--result {
+  inline-size: min(100%, 124px);
+}
