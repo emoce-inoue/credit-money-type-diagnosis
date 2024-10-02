@@ -15,7 +15,9 @@
 .js-fade-up.is-inview {
   opacity: 1;
   translate: 0;
-  transition: opacity var(--speed-normal), translate var(--speed-normal);
+  transition:
+    opacity var(--speed-normal),
+    translate var(--speed-normal);
 }
 
 .animation-delay-normal {

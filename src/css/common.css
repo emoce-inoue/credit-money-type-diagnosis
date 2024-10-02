@@ -5,7 +5,7 @@
   border: 1.5px solid var(--color-bluescale-300);
   border-radius: calc(infinity * 1px);
   box-shadow: 0 2px 0 var(--color-bluescale-300);
-  font-size: calc(12* var(--rem-ratio));
+  font-size: calc(12 * var(--rem-ratio));
   text-align: center;
 }
 
@@ -109,7 +109,7 @@
     padding-block: 21px;
     border: 3.5px solid var(--color-bluescale-300);
     box-shadow: 0 4px 0 var(--color-bluescale-300);
-    font-size: calc(18* var(--rem-ratio));
+    font-size: calc(18 * var(--rem-ratio));
   }
 
   .c-button--selected {
@@ -147,12 +147,16 @@
   .c-button:hover {
     background-color: var(--color-yellowscale-100);
     box-shadow: revert;
-    transition: background-color var(--speed-normal), box-shadow var(--speed-normal);
+    transition:
+      background-color var(--speed-normal),
+      box-shadow var(--speed-normal);
   }
 
   .c-full-button:not(.c-full-button--result-disabled):hover {
     box-shadow: revert;
     translate: 0 4px;
-    transition: box-shadow var(--speed-normal), translate var(--speed-normal);
+    transition:
+      box-shadow var(--speed-normal),
+      translate var(--speed-normal);
   }
 }
