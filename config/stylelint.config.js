@@ -13,5 +13,6 @@ module.exports = {
     'at-rule-no-unknown': true,
     'selector-max-id': 0,
     'media-feature-name-no-unknown': true,
+    'selector-class-pattern': null,
   },
 };
