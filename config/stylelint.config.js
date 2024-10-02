@@ -14,5 +14,6 @@ module.exports = {
     'selector-max-id': 0,
     'media-feature-name-no-unknown': true,
     'selector-class-pattern': null,
+    'media-feature-range-notation': 'prefix',
   },
 };
