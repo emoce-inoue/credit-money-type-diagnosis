@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   answers.forEach((select, index) => {
     const buttons = select.querySelectorAll('button');
 
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.addEventListener('click', () => {
         if (button.classList.contains('c-button--selected')) {
           return;
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingScreen.classList.remove('l-loading--hidden');
 
     let totalPoints = 0;
-    answers.forEach(select => {
+    answers.forEach((select) => {
       const selectedButton = select.querySelector('.c-button--selected');
       if (selectedButton) {
         totalPoints += parseInt(selectedButton.getAttribute('data-point'), 10);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const allResults = document.querySelectorAll('.l-result');
-    allResults.forEach(result => result.classList.add('l-result--hidden'));
+    allResults.forEach((result) => result.classList.add('l-result--hidden'));
 
     let resultTypeId = '';
     if (totalPoints >= 41) {

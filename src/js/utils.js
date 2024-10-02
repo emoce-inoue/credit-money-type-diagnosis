@@ -5,25 +5,25 @@
     if (viewport.getAttribute('content') !== value) {
       viewport.setAttribute('content', value);
     }
-  }
+  };
   window.addEventListener('resize', switchViewport);
   switchViewport();
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
   const observerCallback = (entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-inview');
       }
     });
   };
   const defaultObserverOptions = {
-    threshold: 0.1
+    threshold: 0.1,
   };
   const defaultObserver = new IntersectionObserver(observerCallback, defaultObserverOptions);
   const targetElements = document.querySelectorAll('.js-fade, .js-fade-up');
-  targetElements.forEach(target => {
+  targetElements.forEach((target) => {
     defaultObserver.observe(target);
   });
 
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (fixedItem) {
     const fixedItemHeight = fixedItem.offsetHeight;
     const links = document.querySelectorAll('.scroll-link');
-    links.forEach(link => {
-      link.addEventListener('click', event => {
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
         event.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
-        if (targetId === "") {
+        if (targetId === '') {
           window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
           return;
         }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - fixedItemHeight;
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       });
     });
