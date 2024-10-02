@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resultElement = document.getElementById(resultTypeId);
     resultElement.classList.remove('l-result--hidden');
-    resultElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     const snsList = document.querySelector('.l-sns');
     snsList.classList.remove('l-sns--hidden');
     const triangle = document.querySelector('.l-look');

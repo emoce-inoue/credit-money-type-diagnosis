@@ -3,15 +3,21 @@
 }
 
 .l-mv {
+  background: url(../images/mv-bg.webp) no-repeat bottom center / cover;
+}
+
+.l-mv__inner {
   position: relative;
-  padding-block: 20px;
-  background: url(../images/mv-bg.webp) no-repeat center / cover;
-  aspect-ratio: var(--aspect-thumbnail);
+  max-inline-size: 425px;
+  margin-inline: auto;
+  padding-block: 20px 125px;
 }
 
 .l-mv__title-wrapper {
   display: grid;
   gap: 15px;
+  inline-size: fit-content;
+  margin-inline: auto;
 }
 
 .l-mv__title {
@@ -140,6 +146,7 @@
   position: relative;
   padding-inline: calc(25* var(--fluid-ratio-min));
   padding-block-end: 25px;
+  text-align: center;
 }
 
 .l-look:not(.l-look--triangle-hidden):after {
@@ -155,9 +162,12 @@
   clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 
+.l-result-wrapper {
+  background-color: var(--color-bluescale-100);
+}
+
 .l-result {
   padding: 94px calc(25* var(--fluid-ratio-min)) 43px;
-  background-color: var(--color-bluescale-100);
   color: var(--color-bluescale-400);
 }
 
@@ -241,10 +251,22 @@
   margin-block-end: 35px;
 }
 
-.l-result__point-details {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 18px;
+.l-result__point {
+  grid-template-areas:
+  'title title'
+  'img text';
+}
+
+.l-result__point-title {
+  grid-area: title;
+}
+
+.l-result__point-image {
+  grid-area: img;
+}
+
+.l-result__point-description {
+  grid-area: text;
 }
 
 .l-result__point-description {
@@ -280,14 +302,6 @@
 .l-result__consult-images {
   position: absolute;
   inset-block-end: 0;
-}
-
-.l-result__consult-images--left {
-  inset-inline-start: 10px;
-  max-inline-size: 86px;
-}
-
-.l-result__consult-images--right {
   inset-inline-end: 10px;
   max-inline-size: 70px;
 }
@@ -296,7 +310,6 @@
   display: grid;
   gap: 25px;
   padding-block-end: 43px;
-  background-color: var(--color-bluescale-100);
 }
 
 .l-sns__text {
@@ -347,7 +360,6 @@
 
 .l-contact {
   padding: 40px calc(25* var(--fluid-ratio-min));
-  background-color: var(--color-grayscale-0);
 }
 
 .l-contact__title {
@@ -361,6 +373,7 @@
 
 .l-contact__button-wrapper {
   display: grid;
+  justify-content: center;
   gap: 15px;
   margin: 0 auto 22px;
 }
@@ -368,6 +381,7 @@
 .l-contact__text {
   color: var(--color-grayscale-1000);
   font-size: calc(10* var(--rem-ratio));
+  font-weight: var(--font-medium);
 }
 
 .l-contact__text-link {
@@ -401,8 +415,9 @@
 }
 
 .l-investment-info {
+  display: grid;
+  gap: 20px;
   padding: 0 calc(25* var(--fluid-ratio-min)) 25px;
-  background-color: var(--color-grayscale-0);
   color: var(--color-grayscale-1000);
 }
 
@@ -442,7 +457,293 @@
   gap: 10px;
 }
 
-.l-investment-info {
-  display: grid;
-  gap: 20px;
+.l-footer-wrapper {
+  background-color: var(--color-grayscale-0);
+}
+
+@media screen and (max-width: 320px) {
+  .l-result__item-title {
+    font-size: calc(11* var(--rem-ratio));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .l-mv {
+    background: url(../images/mv-bg-pc.png) no-repeat bottom center / cover;
+  }
+
+  .l-mv__inner {
+    max-inline-size: 1300px;
+    padding-block: 66px 114px;
+  }
+
+  .l-mv__sub-title {
+    max-inline-size: 438px;
+  }
+
+  .l-mv__title {
+    max-inline-size: 420px;
+  }
+
+  .l-mv__title-wrapper {
+    gap: 26px;
+  }
+
+  .l-mv__icon--umigame {
+    inset-block-end: 62%;
+    inset-inline-start: 18%;
+    max-inline-size: 150px;
+  }
+
+  .l-mv__icon--iruka {
+    inset-block-end: 25%;
+    inset-inline-start: 11%;
+    max-inline-size: 120px;
+  }
+
+  .l-mv__icon--kumanomi {
+    inset-block-end: 6%;
+    inset-inline-start: 21%;
+    max-inline-size: 128px;
+  }
+
+  .l-mv__icon--maguro {
+    inset-block-end: 6%;
+    inset-inline-end: 21%;
+    max-inline-size: 132px;
+  }
+
+  .l-mv__icon--tatsunootoshigo {
+    inset-block-end: 25%;
+    inset-inline-end: 11%;
+    max-inline-size: 90px;
+  }
+
+  .l-mv__icon--kujira {
+    inset-block-end: 63%;
+    inset-inline-end: 18%;
+    max-inline-size: 150px;
+  }
+
+  .l-intro {
+    margin-block: -70px 70px;
+  }
+
+  .l-question {
+    gap: 40px;
+  }
+
+  .l-question-wrapper {
+    gap: 20px;
+    margin-block-end: 70px;
+  }
+
+  .l-question__title::before {
+    inline-size: min(100%, 90px);
+  }
+
+  .l-question__title {
+    font-size: calc(26* var(--rem-ratio));
+  }
+
+  .l-question__select {
+    gap: 40px;
+  }
+
+  .l-question:not(:last-of-type):after {
+    background: var(--section-border-pc) center / cover;
+  }
+
+  .l-look {
+    padding-block-end: 10px;
+  }
+
+  .l-look--triangle-hidden {
+    padding-block-end: 92px;
+  }
+
+  .l-look:not(.l-look--triangle-hidden):after {
+    background: url(../images/bg-frame.webp) top 40px center / cover, var(--color-bluescale-200);
+    inset-block-end: -160px;
+    block-size: 160px;
+  }
+
+  .l-result__title {
+    inline-size: min(100%, 630px);
+    margin-block-end: 26px;
+  }
+
+  .l-result__image {
+    max-inline-size: 125px;
+  }
+
+  .l-result__header {
+    gap: 27px;
+    margin-block-end: 66px;
+  }
+
+  .l-result__description {
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-result__list {
+    gap: 46px;
+    max-inline-size: 960px;
+    margin-inline: auto;
+    margin-block-end: 64px;
+  }
+
+  .l-result__item-title {
+    inset-block-start: -25px;
+    padding: 7px 0;
+    font-size: calc(24* var(--rem-ratio));
+  }
+
+  .l-result__item-text {
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-result__list-item {
+    padding-block: 60px 30px;
+    box-shadow: 8px 8px 0 var(--panel-box-shadow);
+  }
+
+  .l-result {
+    --_section-triangle-size: 160px;
+    padding: calc(var(--_section-triangle-size) + 40px) calc(25* var(--fluid-ratio-max)) 43px;
+  }
+
+  .l-result__point {
+    grid-template-areas:
+        'img title'
+        'img text';
+    gap: 20px 46px;
+    max-inline-size: 760px;
+    margin-inline: auto;
+    margin-block-end: 50px;
+  }
+
+  .l-result__point-image {
+    max-inline-size: 137px;
+  }
+
+  .l-result__point-title {
+    display: grid;
+    align-items: end;
+    max-inline-size: 481px;
+  }
+
+  .l-result__point-description {
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-result__consult {
+    gap: 27px;
+    max-inline-size: 648px;
+    margin-inline: auto;
+    padding-block: 30px;
+  }
+
+  .l-result__consult-description {
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-result__consult-images {
+    max-inline-size: 136px;
+  }
+
+  .l-sns {
+    padding-block-end: 95px;
+  }
+
+  .l-sns__text {
+    column-gap: 5px;
+    font-size: calc(20* var(--rem-ratio));
+  }
+
+  .l-sns__item {
+    max-inline-size: 46px;
+  }
+
+  .l-contact {
+    padding: 60px calc(25* var(--fluid-ratio-max));
+  }
+
+  .l-contact__title {
+    margin: 0 auto 30px;
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-contact__button-wrapper {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .l-contact__button {
+    max-inline-size: 382px;
+    inline-size: 100%;
+    padding: 23px;
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-contact__inner {
+    max-inline-size: 815px;
+    margin-inline: auto;
+  }
+
+  .l-contact__text {
+    font-size: calc(12* var(--rem-ratio));
+    text-align: center;
+  }
+
+  .l-investment-info__title {
+    font-size: calc(18* var(--rem-ratio));
+  }
+
+  .l-investment-info__subtitle {
+    font-size: calc(14* var(--rem-ratio));
+  }
+
+  .l-investment-info__details {
+    font-size: calc(13* var(--rem-ratio));
+  }
+  
+  .l-investment-info {
+    gap: 34px;
+  }
+
+  .l-investment-info__section {
+    gap: 15px;
+  }
+
+  .l-result__consult-title {
+    max-inline-size: 405px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .l-mv__icon--umigame {
+    max-inline-size: 110px;
+  }
+
+  .l-mv__icon--iruka {
+    max-inline-size: 100px;
+  }
+
+  .l-mv__icon--kumanomi {
+    max-inline-size: 100px;
+  }
+
+  .l-mv__icon--maguro {
+    max-inline-size: 110px;
+  }
+
+  .l-mv__icon--tatsunootoshigo {
+    max-inline-size: 80px;
+  }
+
+  .l-mv__icon--kujira {
+    max-inline-size: 110px;
+  }
 }
