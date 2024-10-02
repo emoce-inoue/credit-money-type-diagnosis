@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultButtonDisabled = document.querySelector('.c-full-button--result-disabled');
   const resultButtonOn = document.querySelector('.c-full-button--result-on');
   const loadingScreen = document.querySelector('.l-loading');
-  let selectedAnswers = new Set();
+  const selectedAnswers = new Set();
 
   answers.forEach((select, index) => {
     const buttons = select.querySelectorAll('button');
