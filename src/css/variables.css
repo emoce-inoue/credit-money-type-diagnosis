@@ -46,7 +46,7 @@
   --background-base: var(--color-bluescale-200);
   --font-base: var(--color-grayscale-900);
   --underline-base: color-mix(in srgb, currentcolor, transparent 40%);
-  --panel-box-shadow: rgb(29 131 195 / 0.2);
+  --panel-box-shadow: rgb(29 131 195 / 20%);
 
   /* z-index */
   --back-z-index: -1;

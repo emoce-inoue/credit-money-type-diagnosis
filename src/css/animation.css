@@ -21,9 +21,11 @@
 }
 
 .animation-delay-normal {
-  transition-delay: var(--speed-normal) !important; /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important */
+  transition-delay: var(--speed-normal) !important;
 }
 
 .animation-delay-slow {
-  transition-delay: var(--speed-slow) !important; /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important */
+  transition-delay: var(--speed-slow) !important;
 }
