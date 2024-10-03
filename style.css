@@ -379,11 +379,11 @@ summary::-webkit-details-marker {
 }
 
 .l-main {
-  background: url(4b80ce221c9e468e8cce.webp) center / contain;
+  background: url(images/bg-frame.webp) center / contain;
 }
 
 .l-mv {
-  background: url(73ddfe66d615da89cfc7.webp) no-repeat bottom center / cover;
+  background: url(images/mv-bg.webp) no-repeat bottom center / cover;
 }
 
 .l-mv__inner {
@@ -497,23 +497,23 @@ summary::-webkit-details-marker {
 }
 
 .l-question__title--one::before {
-  background: url(fee1ac51d40d5d9bb06b.webp) no-repeat center / contain;
+  background: url(images/q1.webp) no-repeat center / contain;
 }
 
 .l-question__title--two::before {
-  background: url(4cc3a57b63fad29f4cae.webp) no-repeat center / contain;
+  background: url(images/q2.webp) no-repeat center / contain;
 }
 
 .l-question__title--three::before {
-  background: url(dfdd3f3c8e71f1a4ebcb.webp) no-repeat center / contain;
+  background: url(images/q3.webp) no-repeat center / contain;
 }
 
 .l-question__title--four::before {
-  background: url(8fdec81250dc91ab7ac9.webp) no-repeat center / contain;
+  background: url(images/q4.webp) no-repeat center / contain;
 }
 
 .l-question__title--five::before {
-  background: url(057e4599c659584c7f9b.webp) no-repeat center / contain;
+  background: url(images/q5.webp) no-repeat center / contain;
 }
 
 .l-question__select {
@@ -538,7 +538,7 @@ summary::-webkit-details-marker {
   inline-size: 100vw;
   block-size: 80px;
   background:
-    url(4b80ce221c9e468e8cce.webp) center / cover,
+    url(images/bg-frame.webp) center / cover,
     var(--color-bluescale-200);
   border-block-start: 0.5px solid var(--color-bluescale-200);
   clip-path: polygon(100% 0, 0 0, 50% 100%);
@@ -841,7 +841,7 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 1024px) {
   .l-mv {
-    background: url(c4c18188ac9703775b71.png) no-repeat bottom center / cover;
+    background: url(images/mv-bg-pc.png) no-repeat bottom center / cover;
   }
 
   .l-mv__inner {
@@ -936,7 +936,7 @@ summary::-webkit-details-marker {
 
   .l-look:not(.l-look--triangle-hidden)::after {
     background:
-      url(4b80ce221c9e468e8cce.webp) top 40px center / cover,
+      url(images/bg-frame.webp) top 40px center / cover,
       var(--color-bluescale-200);
     inset-block-end: -160px;
     block-size: 160px;
@@ -1086,6 +1086,9 @@ summary::-webkit-details-marker {
 
   .l-investment-info {
     gap: 34px;
+    max-inline-size: 1240px;
+    margin-inline: auto;
+    padding: 0 calc(25* var(--fluid-ratio-max)) 25px;
   }
 
   .l-investment-info__section {
