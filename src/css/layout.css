@@ -706,6 +706,9 @@
 
   .l-investment-info {
     gap: 34px;
+    max-inline-size: 1240px;
+    margin-inline: auto;
+    padding: 0 calc(25* var(--fluid-ratio-max)) 25px;
   }
 
   .l-investment-info__section {
