@@ -155,7 +155,7 @@
   inset-inline: 0;
   inset-block-end: -80px;
   display: grid;
-  inline-size: 100vw;
+  inline-size: 100%;
   block-size: 80px;
   background:
     url('../images/bg-frame.webp') center / cover,
@@ -748,4 +748,24 @@
   .l-mv__icon--kujira {
     max-inline-size: 110px;
   }
+}
+
+/* common-parts negative code */
+body {
+  background: var(--background-base);
+}
+
+.l-contact__text-link {
+  display: inline-block;
+}
+
+.ly_footer {
+  margin-top: 0;
+}
+
+.el_navBtn,
+.el_navBtn.el_navBtn__close {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
