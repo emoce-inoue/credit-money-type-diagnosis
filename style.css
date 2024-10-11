@@ -757,6 +757,7 @@ summary::-webkit-details-marker {
 }
 
 .l-contact__text-link {
+  display: inline-block;
   color: var(--color-bluescale-400);
   text-decoration-line: underline;
 }
@@ -1133,10 +1134,6 @@ summary::-webkit-details-marker {
 /* common-parts negative code */
 body {
   background: var(--background-base);
-}
-
-.l-contact__text-link {
-  display: inline-block;
 }
 
 .ly_footer {
