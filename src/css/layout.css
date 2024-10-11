@@ -453,6 +453,10 @@
   background-color: var(--color-grayscale-0);
 }
 
+.l-retry {
+  text-align: center;
+}
+
 @media screen and (max-width: 320px) {
   .l-result__item-title {
     font-size: calc(11 * var(--rem-ratio));
@@ -708,7 +712,7 @@
     gap: 34px;
     max-inline-size: 1240px;
     margin-inline: auto;
-    padding: 0 calc(25* var(--fluid-ratio-max)) 25px;
+    padding: 0 calc(25 * var(--fluid-ratio-max)) 25px;
   }
 
   .l-investment-info__section {
