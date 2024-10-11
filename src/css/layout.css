@@ -155,7 +155,7 @@
   inset-inline: 0;
   inset-block-end: -80px;
   display: grid;
-  inline-size: 100vw;
+  inline-size: 100%;
   block-size: 80px;
   background:
     url('../images/bg-frame.webp') center / cover,
@@ -453,6 +453,10 @@
   background-color: var(--color-grayscale-0);
 }
 
+.l-retry {
+  text-align: center;
+}
+
 @media screen and (max-width: 320px) {
   .l-result__item-title {
     font-size: calc(11 * var(--rem-ratio));
@@ -708,7 +712,7 @@
     gap: 34px;
     max-inline-size: 1240px;
     margin-inline: auto;
-    padding: 0 calc(25* var(--fluid-ratio-max)) 25px;
+    padding: 0 calc(25 * var(--fluid-ratio-max)) 25px;
   }
 
   .l-investment-info__section {
@@ -744,4 +748,24 @@
   .l-mv__icon--kujira {
     max-inline-size: 110px;
   }
+}
+
+/* common-parts negative code */
+body {
+  background: var(--background-base);
+}
+
+.l-contact__text-link {
+  display: inline-block;
+}
+
+.ly_footer {
+  margin-top: 0;
+}
+
+.el_navBtn,
+.el_navBtn.el_navBtn__close {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ページがロードされた後に、ハッシュに基づいてスクロール
+  if (window.location.hash === '#question') {
+    const questionElement = document.getElementById('question');
+    if (questionElement) {
+      questionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   const answers = document.querySelectorAll('.l-question__select');
   const resultButtonDisabled = document.querySelector('.c-full-button--result-disabled');
   const resultButtonOn = document.querySelector('.c-full-button--result-on');
@@ -78,4 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
       loadingScreen.classList.add('l-loading--hidden');
     }, 1000);
   });
+
+  const retryButton = document.querySelector('.js-retry-button');
+  if (retryButton) {
+    retryButton.addEventListener('click', () => {
+      window.location.hash = '';
+      window.location.hash = 'question';
+      location.reload();
+    });
+  }
 });
